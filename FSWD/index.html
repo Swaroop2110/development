@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Recipe Share</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+       <h1 class="logo-heading">
+  <img src="https://static.vecteezy.com/system/resources/previews/003/525/773/large_2x/cooking-logo-template-design-icon-illustration-vector.jpg" alt="Cooking Logo">
+  Quick Recipe Share
+</h1>
+        
+        <p>STUDENTS PLATFORM</p>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#recipes" class="nav-link">Recipes</a></li>
+                <li><a href="#share" class="nav-link">Share Your Recipe</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <button id="darkModeToggle" style="margin: 10px; padding: 10px; font-size: 1rem; border-radius: 35px; background-color: white;">
+    🌙 
+</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Discover Student-Friendly Recipes</h2>
+            <p>Explore a variety of delicious and budget-friendly recipes perfect for students.</p>
+
+            <figure>
+                <img src="https://www.indianveggiedelight.com/wp-content/uploads/2023/01/white-sauce-pasta.jpg" alt="Delicious and easy student meal, e.g., pasta with vegetables." width="600" height="400">
+                <figcaption>A quick and delicious meal for busy students.</figcaption>
+            </figure>
+
+            <p>Watch a quick recipe video:</p>
+            <div class="video-container">
+                <!-- <iframe src="https://youtu.be/bTo0J-lDbUU?si=P6gCE9wT5jVwmcbE" title="YouTube video player about quick recipes (Rick Astley)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                 <div class="video-container">
+    <iframe 
+        src="https://www.youtube.com/embed/bTo0J-lDbUU" 
+        title="YouTube video player about quick recipes" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+</div>
+
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Our Platform</h2>
+            <p>We believe that student life doesn't mean sacrificing good food. Our platform is designed to help you find and share recipes that are:</p>
+            <ul>
+                <li>Apple: Affordable</li>
+                <li>Banana: Quick to prepare</li>
+                <li>Cherry: Require minimal ingredients</li>
+                <li>Date: Healthy and nutritious</li>
+                <li>Elderberry: Delicious!</li>
+            </ul>
+        </section>
+
+        <section id="recipes">
+            <h2>Featured Recipes</h2>
+            <table>
+                <caption>Quick Recipe Showcase</caption>
+                <thead>
+                    <tr>
+                        <th>Recipe Name</th>
+                        <th>Prep Time</th>
+                        <th>Cook Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pasta Aglio e Olio</td>
+                        <td>5 mins</td>
+                        <td>10 mins</td>
+                    </tr>
+                    <tr>
+                        <td>Scrambled Eggs on Toast</td>
+                        <td>2 mins</td>
+                        <td>3 mins</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td colspan="2">More recipes coming soon!</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Quick Chicken Stir-fry</td>
+                        <td>10 mins</td>
+                        <td>15 mins</td>
+                    </tr>
+                    <tr>
+                        <td>(Total 25 mins)</td>
+                        <td>(Serves 2)</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Summary: Easy and fast meals for students.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="share">
+            <h2>Share Your Quick Recipe</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="recipeName">Recipe Name:</label>
+                    <input type="text" id="recipeName" name="recipeName" placeholder="e.g., Speedy Ramen" required>
+                </p>
+                <p>
+                    <label for="recipePassword">Secret Password (for editing):</label>
+                    <input type="password" id="recipePassword" name="recipePassword" required>
+                </p>
+                <p>
+                    <label for="cuisine">Cuisine Type:</label>
+                    <select id="cuisine" name="cuisine">
+                        <option value="italian">Italian</option>
+                        <option value="asian">Asian</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="comfort">Comfort Food</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="ingredients">Ingredients (list each on new line):</label>
+                    <textarea id="ingredients" name="ingredients" rows="5" placeholder="e.g.,&#10;1 cup pasta&#10;2 tomatoes&#10;1 clove garlic" required></textarea>
+                </p>
+                <p>
+                    <label for="instructions">Cooking Instructions:</label>
+                    <textarea id="instructions" name="instructions" rows="8" placeholder="Step-by-step guide..." required></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Submit Recipe">
+                </p>
+            </form>
+        </section>
+
+        <!-- <section id="canvas-example">
+            <h2>Visualizing Recipe Steps (Example)</h2>
+            <canvas id="recipeCanvas" width="400" height="200" style="border:1px solid #d3d3d3;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+            <p>This is an example of what could be drawn on a canvas, like a simple progress bar or a diagram.</p>
+        </section> -->
+        <section id="canvas-example">
+    <h2>Visualizing Recipe Steps</h2>
+    <canvas id="recipeCanvas" width="400" height="200" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <p>This shows a progress bar of recipe steps being completed.</p>
+</section>
+
+<script>
+    // Get canvas and context
+    const canvas = document.getElementById('recipeCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Total steps for example (can be dynamic)
+    const totalSteps = 5;
+    let completedSteps = 3; // Change this value to simulate progress
+
+    // Clear the canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw background progress bar
+    ctx.fillStyle = "#e0e0e0";
+    ctx.fillRect(50, 80, 300, 30);
+
+    // Draw completed steps
+    const progressWidth = (completedSteps / totalSteps) * 300;
+    ctx.fillStyle = "#FF5733";
+    ctx.fillRect(50, 80, progressWidth, 30);
+
+    // Draw text
+    ctx.font = "18px Arial";
+    ctx.fillStyle = "#333";
+    ctx.fillText(`Steps: ${completedSteps} / ${totalSteps}`, 120, 60);
+</script>
+
+
+        <!-- <section id="video-example">
+            <h2>Recipe Video Showcase (HTML5 Video)</h2>
+            <video width="640" height="360" controls preload="metadata">
+                <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+                <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mov-file.mov" type="video/quicktime">
+                Your browser does not support the video tag.
+            </video>
+            <p>An example of an embedded HTML5 video for a recipe demonstration.</p>
+        </section> -->
+     <section id="video-example">
+    <h2>Recipe Video Showcase</h2>
+    <video width="640" height="360" controls preload="metadata" poster="https://via.placeholder.com/640x360?text=Recipe+Video">
+        <source src="https://videos.pexels.com/video-files/3196463/3196463-uhd_2560_1440_25fps.mp4" type="video/mp4">
+        Your browser does not support the HTML5 video tag.
+    </video>
+    <!-- //An example of an embedded HTML5 -->
+    <p> video for a recipe demonstration.</p>
+</section>
+
+
+    </main>
+
+    <!-- <footer>
+        <p>&copy; 2025 Recipe Share Platform. All rights reserved.</p>
+        <p>&copy; Created by <strong>Swaroop Gupta</strong></p>
+      <p class="contact-info">Email: <a href="mailto:swaroopgupta2005@gmail.com">swaroopgupta2005@gmail.com</a> | Phone: <a href="tel:+917985369919">+91 7985369919</a></p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer> -->
+   <footer id="contact">
+    <p>&copy; 2025 Recipe Share Platform. All rights reserved.</p>
+    <p>&copy; Created by <strong>Swaroop Gupta</strong> & <strong>Kanish Mittal</strong></p>
+    <p class="contact-info">
+        Swaroop: 
+        Email: <a href="mailto:swaroopgupta2005@gmail.com">swaroopgupta2005@gmail.com</a> | 
+        Phone: <a href="tel:+917985369919">+91 7985369919</a><br>
+        Kanish: 
+        Email: <a href="mailto:mittalkanish21@gmail.com">mittalkanish21@gmail.com</a> | 
+        Phone: <a href="tel:+919799689318">+91 9799689318</a>
+    </p>
+    <p>
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms of Service</a>
+    </p>
+</footer>
+
+
+
+    <script>
+        // Canvas Drawing
+        const canvas = document.getElementById('recipeCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = "#FF5733"; // Recipe-themed color
+        ctx.fillRect(50, 50, 100, 100); // Draw a rectangle
+
+        ctx.font = "16px Arial";
+        ctx.fillStyle = "#333";
+        ctx.fillText("Recipe Progress Placeholder", 10, 30);
+    </script>
+    <script>
+    const toggleButton = document.getElementById('darkModeToggle');
+
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+
+        // Save preference
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    // Load theme on page load
+    window.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    });
+</script>
+    
+
+
+</body>
+</html>
